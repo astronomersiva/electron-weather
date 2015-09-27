@@ -1,5 +1,14 @@
 {
-  "name"    : "weather-prediction",
-  "version" : "0.1.0",
-  "main"    : "main.js"
+  "name": "weather-forecast",
+  "version": "0.1.0",
+  "main": "main.js",
+  "author": "Sivasubramanyam A <sivasubramanyama@gmail.com> (http://sivasubramanyam.me)",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager ./ weather-forecast --platform=linux --arch=x64 --version=0.33.3"
+  },
+  "devDependencies": {
+    "electron-packager": "^5.1.0"
+  }
 }
