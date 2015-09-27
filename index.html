@@ -4,25 +4,68 @@
         <title>Weather at your place</title>
         <meta name="description" content="Weather">
     	<meta name="keywords" content="Weather,JavaScript">
-   	<meta name="author" content="Sivasubramanyam">
-    	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-	<script type="text/javascript">
-    		window.$ = window.jQuery = require(__dirname+'/js/jquery.js');
-	</script>
+       	<meta name="author" content="Sivasubramanyam">
+        	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    	<script type="text/javascript">
+        		window.$ = window.jQuery = require(__dirname+'/js/jquery.js');
+    	</script>
     	<script src="js/script.js"></script>    	 
     	<link rel="stylesheet" type="text/css" href="css/weather-icons.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     	<link rel="stylesheet" type="text/css" href="css/styles.css">
-    	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
     </head>
     <body> 
-     <div class="container"> 
-     	<div class="row">     
-     		<div class="col-md-6" id="icon"></div>
-     		<div class="col-md-6">
-	     		<div id="weather"></div>
-	     		<div id="weatherParams"></div>
-	     	</div>
-	</div>
-     </div>      
+         <div class="container weather-app"> 
+         	<div class="row">    
+         		<div class="col-md-6 text-center" id="icon"></div>
+                <div class="col-md-6 text-center" id="city-name"></div> 
+            </div>
+            <div class="row">
+         		<div class="col-md-6 center-block">
+    	     		<div id="weather" class="text-center"></div>
+                </div>
+            </div>
+            <div class="row panel">
+                <div class="pull-left thermo-group">
+                    <div class="col-sm-2">
+                        <div id="temperature">
+                            <i class="wi wi-thermometer"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div id="temperature-text"></div>
+                    </div>
+                </div>
+                <div class="humidity-group">
+                    <div class="col-sm-2">
+                        <div id="humidity">
+                            <i class="wi wi-humidity"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div id="humidity-text"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row days">
+                <div class="text-center  col-sm-2 col-sm-offset-1" id="day-1">
+                </div>
+                <div class="text-center  col-sm-2" id="day-2">
+                </div>
+                <div class="text-center  col-sm-2" id="day-3">
+                </div>
+                <div class="text-center  col-sm-2" id="day-4">
+                </div>
+                <div class="text-center  col-sm-2" id="day-5">
+                </div>
+            </div>
+         </div>  
+         <div class="loader">
+            <img src="img/loading.gif" clas="img-responsive">
+            <p class="loader-text">
+                Loading..Please Wait.
+            </p>
+         </div>    
     </body>
 </html>
